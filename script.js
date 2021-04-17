@@ -19,7 +19,22 @@ function generatePassword(numOfChar, shouldIncludeLowerCase, shouldIncludeUpperC
       possibilitiesList.push(specialCharacters);
     }
     console.log(possibilitiesList);
-    
+
+    var password = '';
+    var possibilitiesIndex = 0;
+
+    for ( var i = 0; i < numOfChar; i++) {
+      password += randomChar(possibilitiesList[possibilitiesIndex]);
+      possibilitiesIndex++;
+
+      if (possibilitiesIndex >= possibilitiesList.length) {
+        possibilitiesIndex = 0;
+      }
+    }
+    return password;
+}
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
