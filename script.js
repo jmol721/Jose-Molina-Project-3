@@ -1,5 +1,25 @@
 // Assignment code here
+function generatePassword(numOfChar, shouldIncludeLowerCase, shouldIncludeUpperCase, shouldIncludeNumericChar, shouldIncludeSpecialChar) {
+  var lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  var upperCaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numericValues = "0123456789";
+  var specialCharacters = "~!@#$%^&*()_+=-{}|:<>?[]\;,./";
 
+  var possibilitiesList = [];
+    if (shouldIncludeLowerCase) {
+      possibilitiesList.push(lowerCaseAlphabet);
+    }
+    if (shouldIncludeUpperCase) {
+      possibilitiesList.push(upperCaseAlphabet);
+    }
+    if (shouldIncludeNumericChar) {
+      possibilitiesList.push(numericValues);
+    }
+    if (shouldIncludeSpecialChar) {
+      possibilitiesList.push(specialCharacters);
+    }
+    console.log(possibilitiesList);
+    
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
