@@ -34,7 +34,9 @@ function generatePassword(numOfChar, shouldIncludeLowerCase, shouldIncludeUpperC
     return password;
 }
 
-
+function randomChar(charSet) {
+  return charSet.charAt(Math.floor(Math.random() * charSet.length));
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
